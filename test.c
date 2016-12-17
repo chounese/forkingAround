@@ -4,6 +4,11 @@
 
 #include "fork.h"
 
+void writer(int file, int toWrite)
+{
+  write_to_pipe(file, toWrite + 2);
+}
+
 int main(int argc, char **argv)
 {
   int output;
